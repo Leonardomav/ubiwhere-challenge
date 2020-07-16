@@ -33,7 +33,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'rest_framework',
     'app_challenge.apps.AppChallengeConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -41,7 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.gis'
+    'django.contrib.gis',
+    'django_filters',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
