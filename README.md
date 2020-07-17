@@ -1,3 +1,4 @@
+
 # Ubiwhere-Challenge
 
 Basic Django REST API to manage urban occurrences for the Ubiwhere challenge.
@@ -23,12 +24,12 @@ sudo apt install postgresql-10-postgis-scripts
 sudo apt install postgis
 
 5. Create project database and database superuser
-- sudo -u postgres -i - enters sudo shell with postgres users
-- psql - enters postgres console
-- CREATE DATABASE mydatabase; - creates project database
-- CREATE USER testuser WITH PASSWORD 'password1' - Creates database user for the project
-- ALTER ROLE testuser SUPERUSER - Sets testuser as database superusers (needed for PostGIS)
-- Exit postgress console and sudo shell
+	- sudo -u postgres -i - enters sudo shell with postgres users
+	- psql - enters postgres console
+	- CREATE DATABASE mydatabase; - creates project database
+	- CREATE USER testuser WITH PASSWORD 'password1' - Creates database user for the project
+	- ALTER ROLE testuser SUPERUSER - Sets testuser as database superusers (needed for PostGIS)
+	- Exit postgress console and sudo shell
 
 6. Apply migrations to the new database
 python manage.py migrate
@@ -41,13 +42,19 @@ python manage.py createsuperuser
 The endpoints are implemented using Django Rest Framework [DefaultRouter](https://www.django-rest-framework.org/api-guide/routers/#defaultrouter) class.
 
 ### Endpoints List
-[WIP]
+
+|Route| GET | POST |  DELETE |  PATCH/PUT
+|--|--|--|--|--|--|
+|/occurrences/| list all occurrences | add occurrence |------------------ | ------------------ | 
+|/occurrences/{i}/| retrieve occurrence _i_ | ------------------ | delete occurrence _i_ | update occurrence _i_ 
+|/categories/| list all categories| add category | ------------------ | ------------------ |
+|/categories/{i}/| retrieve category _i_ | ------------------  | delete category _i_ | update category _i_
 
 Few things to note:
-
- - Category endpoints require staff authentication
+ - Category endpoints require staff authentication.
  - Occurrence endpoints allow PUT and PATCH requests only when the user making the request is the owner of the occurrence, or is staff.
  - Only staff can update occurrence status. 
+ - Users need to be authenticated to add of modify and occurrence entry.
 
 ### Postman Collection
 To easily present and test the implemented endpoints a Postman Collection is provided [here](https://www.getpostman.com/collections/af5ca37b2c5550c8ad86)
