@@ -1,5 +1,6 @@
 from rest_framework import viewsets, permissions
 from django_filters import rest_framework as filters
+from rest_framework_gis.filters import DistanceToPointFilter
 from .models import Occurrence, Category
 from .serializers import OccurrenceDefaultSerializer, CategorySerializer, \
     OccurrenceListSerializer, OccurrenceStaffUpdateSerializer
@@ -23,7 +24,8 @@ class OccurrenceView(viewsets.ModelViewSet):
     queryset = Occurrence.objects.all()
     serializer_class = OccurrenceDefaultSerializer
     permission_classes = (IsAuthorOrStaff,)
-    filter_backends = (filters.DjangoFilterBackend,)  # backend for the search functionality
+    distance_filter_field = 'point'
+    filter_backends = (DistanceToPointFilter, filters.DjangoFilterBackend)  # backend for the search functionality
     filterset_class = OccurrenceFilter  # filters class used to search occurrences
 
     def get_serializer_class(self):

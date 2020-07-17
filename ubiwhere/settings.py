@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.gis',
     'django_filters',
     'rest_framework',
+    'rest_framework_gis'
 ]
 
 MIDDLEWARE = [
@@ -85,7 +86,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'NAME': 'mydatabase',
-        'USER': 'postgres',
+        'USER': 'testuser',
         'PASSWORD': 'password1',
         'HOST': '127.0.0.1',
         'PORT': '5432',
