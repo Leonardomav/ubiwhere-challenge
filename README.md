@@ -50,4 +50,4 @@ Few things to note:
  - Only staff can update occurrence status. 
 
 ### Postman Collection
-To easily present and test the implemented endpoints a Postman Collection is provided at [WIP]
+To easily present and test the implemented endpoints a Postman Collection is provided [here](https://www.getpostman.com/collections/af5ca37b2c5550c8ad86)

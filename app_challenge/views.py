@@ -12,7 +12,7 @@ class OccurrenceFilter(filters.FilterSet):
 
     class Meta:
         model = Occurrence
-        fields = ['category__name', 'author']
+        fields = ['category__name', 'author__username']
 
 
 class OccurrenceView(viewsets.ModelViewSet):
@@ -23,7 +23,7 @@ class OccurrenceView(viewsets.ModelViewSet):
     """
     queryset = Occurrence.objects.all()
     serializer_class = OccurrenceDefaultSerializer
-    permission_classes = (IsAuthorOrStaff,)
+    permission_classes = (permissions.IsAuthenticatedOrReadOnly, IsAuthorOrStaff)
     distance_filter_field = 'point'
     filter_backends = (DistanceToPointFilter, filters.DjangoFilterBackend)  # backend for the search functionality
     filterset_class = OccurrenceFilter  # filters class used to search occurrences
