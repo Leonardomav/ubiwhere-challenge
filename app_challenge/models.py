@@ -15,6 +15,7 @@ class Category(models.Model):
     Field - description:
         Description of the category;
     """
+    
     name = models.CharField(max_length=200)
     description = models.CharField(max_length=200)
 

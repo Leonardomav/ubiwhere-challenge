@@ -21,6 +21,7 @@ class OccurrenceView(viewsets.ModelViewSet):
         occurrence view;
         Uses prebuilt viewsets.ModelViewSet -> https://www.django-rest-framework.org/api-guide/viewsets/#modelviewset
     """
+
     queryset = Occurrence.objects.all()
     serializer_class = OccurrenceDefaultSerializer
     permission_classes = (permissions.IsAuthenticatedOrReadOnly, IsAuthorOrStaff)
@@ -32,6 +33,7 @@ class OccurrenceView(viewsets.ModelViewSet):
         """
         Returns different serializer class depending on the request method and user permissions.
         """
+
         serializer_class = self.serializer_class
 
         if self.request.method == 'GET':
@@ -50,6 +52,7 @@ class CategoryView(viewsets.ModelViewSet):
         Category view;
         Uses prebuilt viewsets.ModelViewSet -> https://www.django-rest-framework.org/api-guide/viewsets/#modelviewset
     """
+    
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
     permission_classes = (permissions.IsAdminUser,)  # prebuilt permission - only if user is_staff == True
