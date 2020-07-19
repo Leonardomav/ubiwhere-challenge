@@ -76,7 +76,7 @@ Few things to note:
  - Category endpoints require staff authentication.
  - Occurrence endpoints allow PUT and PATCH requests only when the user making the request is the owner of the occurrence, or is staff.
  - Only staff can update occurrence status. 
- - Users need to be authenticated to add of modify and occurrence entry.
+ - Users need to be authenticated to add, modify and delete an occurrence entry.
 
 ### Postman Collection
 To easily present and test the implemented endpoints a Postman Collection is provided [here](https://www.getpostman.com/collections/af5ca37b2c5550c8ad86)
