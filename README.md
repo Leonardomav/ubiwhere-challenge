@@ -5,6 +5,7 @@ Basic Django REST API to manage urban occurrences for the Ubiwhere challenge.
 
 ## Instalation Guide
 Note: This installation guide is made for Ubuntu based linux only.
+
  1. Install Python3.7 in your machine
  
  2. Create a virtual environment for this project and enter it
@@ -38,7 +39,26 @@ Note: This installation guide is made for Ubuntu based linux only.
 	- ```python manage.py createsuperuser```
 
 8. Run _Django_ server
-	- ```python manage.py runserver```
+	- ```python manage.py runserver 0.0.0.0:8000```
+
+
+### DOCKER Instaltion Guide
+Alternatively, this project can be installed via Docker. It is assumed that docker and docker-compose are already installed. You can do so by following this guide for [docker installation](https://docs.docker.com/engine/install/ubuntu/) and for [docker-compose installation](https://docs.docker.com/compose/install/)
+
+Note: in order to run the project via docker please change the database configuration in _ubiwhere/settings.py_ from ```'HOST': '127.0.0.1'``` to ```'HOST': 'db'```. 
+
+1. Build docker-compose 
+	- ```sudo docker-compose build```
+
+2. Apply migrations to the database
+	- ```sudo docker-compose run web python3 manage.py migrate```
+
+3. Create project superuser
+	- ```sudo docker-compose run web python3 manage.py createsuperuser``` 
+
+4. Run docker containers
+	- ```sudo docker-compse up``` 
+
 
 ## API Endpoints
 The endpoints are implemented using Django Rest Framework [DefaultRouter](https://www.django-rest-framework.org/api-guide/routers/#defaultrouter) class.
