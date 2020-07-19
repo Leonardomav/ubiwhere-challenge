@@ -68,9 +68,9 @@ The endpoints are implemented using Django Rest Framework [DefaultRouter](https:
 |Route| GET | POST |  DELETE |  PATCH/PUT |
 |--|--|--|--|--|
 |/occurrences/| list all occurrences | add occurrence |------------------ | ------------------ | 
-|/occurrences/{i}/| retrieve occurrence _i_ | ------------------ | delete occurrence _i_ | update occurrence _i_  |
+|/occurrences/{pk}/| retrieve occurrence _pk_ | ------------------ | delete occurrence _pk_ | update occurrence _pk_  |
 |/categories/| list all categories| add category | ------------------ | ------------------ |
-|/categories/{i}/| retrieve category _i_ | ------------------  | delete category _i_ | update category _i_ |
+|/categories/{pk}/| retrieve category _pk_ | ------------------  | delete category _pk_ | update category _pk_ |
 
 Few things to note:
  - Category endpoints require staff authentication.
