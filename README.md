@@ -42,7 +42,7 @@ Note: This installation guide is made for Ubuntu based linux only.
 	- ```python manage.py runserver 0.0.0.0:8000```
 
 
-### DOCKER Instaltion Guide
+### DOCKER Instalation Guide
 Alternatively, this project can be installed via Docker. It is assumed that docker and docker-compose are already installed. You can do so by following this guide for [docker installation](https://docs.docker.com/engine/install/ubuntu/) and for [docker-compose installation](https://docs.docker.com/compose/install/)
 
 Note: in order to run the project via docker please change the database configuration in _ubiwhere/settings.py_ from ```'HOST': '127.0.0.1'``` to ```'HOST': 'db'```. 
