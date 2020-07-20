@@ -1,0 +1,42 @@
+[
+	{
+		"pk": 1,
+		"model": "app_challenge.Category",
+		"fields": {
+			"name": "CONSTRUCTION",
+			"description": "Eventos planeados de obras nas estradas"
+		}
+	},
+	{
+		"pk": 2,
+		"model": "app_challenge.Category",
+		"fields": {
+			"name": "SPECIAL_EVENT",
+			"description": "Eventos especiais (concertos, feiras, etc)"
+		}
+	},
+	{
+		"pk": 3,
+		"model": "app_challenge.Category",
+		"fields": {
+			"name": "INCIDENT",
+			"description": "Acidentes ou outros eventos inesperados"
+		}
+	},
+	{
+		"pk": 4,
+		"model": "app_challenge.Category",
+		"fields": {
+			"name": "WEATHER_CONDITION",
+			"description": "Eventos meteorológicos que afetam as estradas"
+		}
+	},
+	{
+		"pk": 5,
+		"model": "app_challenge.Category",
+		"fields": {
+			"name": "ROAD_CONDITION",
+			"description": "Estados das estradas que afetem quem circula nestas (piso degradado, buracos, etc)"
+		}
+	}
+]

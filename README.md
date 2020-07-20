@@ -4,8 +4,9 @@
 Basic Django REST API to manage urban occurrences for the Ubiwhere challenge.
 
 ## Instalation Guide
-Note: This installation guide is made for Ubuntu based linux only.
+To note that this installation guide is made for Ubuntu based linux only.
 
+### MANUAL Instalation Guide
  1. Clone the repository
 
  2. Install Python3.7 in your machine
@@ -40,7 +41,10 @@ Note: This installation guide is made for Ubuntu based linux only.
 8. Create Django project superuser
 	- ```python manage.py createsuperuser```
 
-9. Run _Django_ server
+9. Populate the category model with the initial entries
+	- ```python manage.py loaddata categories-fixture.json```  
+
+10. Run _Django_ server
 	- ```python manage.py runserver 0.0.0.0:8000```
 
 
@@ -59,7 +63,10 @@ Note: in order to run the project via docker please change the database configur
 4. Create project superuser
 	- ```sudo docker-compose run web python3 manage.py createsuperuser``` 
 
-5. Run docker containers
+5. Populate the category model with the initial entries
+	- ```sudo docker-compose run web python3 manage.py loaddata categories-fixture.json```  
+
+6. Run docker containers
 	- ```sudo docker-compse up``` 
 
 
