@@ -67,7 +67,7 @@ Note: in order to run the project via docker please change the database configur
 	- ```sudo docker-compose run web python3 manage.py loaddata categories-fixture.json```  
 
 6. Run docker containers
-	- ```sudo docker-compse up``` 
+	- ```sudo docker-compose up``` 
 
 
 ## API Endpoints
