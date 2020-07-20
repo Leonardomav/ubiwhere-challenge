@@ -80,6 +80,7 @@ Few things to note:
  - Occurrence endpoints allow PUT and PATCH requests only when the user making the request is the owner of the occurrence, or is staff.
  - Only staff can update occurrence status. 
  - Users need to be authenticated to add, modify and delete an occurrence entry.
+ - User management is made via the Django admin dashboard.
 
 ### Postman Collection
 To easily present and test the implemented endpoints a Postman Collection is provided [here](https://www.getpostman.com/collections/af5ca37b2c5550c8ad86)
